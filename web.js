@@ -12,7 +12,7 @@ app.get('/:symbol', function(req, response){
 	var symbol = req.params.symbol;
 	console.log('passwordgenerator');
 	var passwordgenerator = require('./passwordgenerator');
-	response.send(passwordgenerator.generate_password(length, symbol));
+	response.send(passwordgenerator.generate_password(8, symbol));
 });
 
 app.get('/:symbol/:length', function(req, response){
