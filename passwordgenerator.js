@@ -143,7 +143,7 @@ generate_password = function(length, s) {
 	var list = keylist;
 	if (s==1) list = list + symbol;
 	tmp='';
-	if (length>32) length=32;
+	if (length>64) length=64;
 	for (i=0;i<length;i++) {
 		tmp += list.charAt(Math.floor(Math.random()*list.length));
 	}
